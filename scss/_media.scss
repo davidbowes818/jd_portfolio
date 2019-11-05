@@ -1,0 +1,173 @@
+// TABLETS AND SMALLER
+
+@media (max-width: 800px) {
+  #header-home {
+    height: 30rem;
+    .header-content {
+      padding-top: 5rem;
+    }
+  }
+  #about {
+    &-a {
+      .bio-image {
+        height: 100%;
+      }
+    }
+  }
+}
+
+// SMARTPHONES
+
+@media (max-width: 500px) {
+  #main-nav {
+    flex-direction: column;
+    align-items: center;
+    li {
+      padding: 1rem;
+    }
+  }
+  #header {
+    &-home {
+      height: 10rem;
+      border-bottom: 2px solid $main-color;
+      background-position: 20% 30%;
+      .header-content {
+        display: none;
+      }
+    }
+    &-inner {
+      height: 10rem;
+    }
+  }
+  // STACK GRID COLUMNS
+  #home-a .specials,
+  #home-b .stats,
+  #home-c .process,
+  #about-d .testimonials,
+  #contact-b .contact-info,
+  .items {
+    grid-template-columns: 1fr;
+  }
+  #home {
+    &-a {
+      .specials div {
+        border-bottom: 2px solid $light-color;
+        padding-bottom: 1rem;
+        &:last-child {
+          border: none;
+          padding-bottom: 0;
+        }
+      }
+    }
+    &-b {
+      .stats div {
+        padding: 2rem 0 1rem 0;
+      }
+    }
+  }
+  // ABOUT
+  #about {
+    &-a {
+      .about-info {
+        grid-template-areas:
+          'bioimage'
+          'bio'
+          'aw1'
+          'aw2'
+          'aw3';
+        [class^='award'] {
+          border-bottom: 1px solid $medium-color;
+          &:last-child {
+            border: none;
+          }
+        }
+      }
+      .bio {
+        border: none;
+        &-image {
+          border-bottom: 3px solid $main-color;
+        }
+      }
+    }
+    &-c {
+      display: none;
+    }
+    &-d {
+      .testimonials {
+        div {
+          ul {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+  // CONTACT
+  #contact {
+    &-a {
+      .text-fields {
+        grid-template-areas:
+          'name'
+          'subject'
+          'email'
+          'phone'
+          'message';
+      }
+    }
+    &-b {
+      .contact-info div {
+        margin-bottom: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px #555 solid;
+        &:last-child {
+          border: none;
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+    }
+    &-c {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+  // FOOTER
+  #main-footer {
+    height: 7rem;
+    .footer-content {
+      flex-direction: column;
+      padding: 1rem;
+      height: 5rem;
+      .social .fab {
+        margin-right: 0.5rem;
+      }
+    }
+  }
+}
+
+// LANDSCAPE
+@media (max-height: 580px) {
+  #header-home {
+    .header-content {
+      padding-top: 3rem;
+    }
+  }
+  #about {
+    &-a {
+      .bio-image {
+        height: 100%;
+      }
+    }
+  }
+}
+
+@media (max-height: 330px) {
+  #header-home {
+    .header-content {
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  }
+}
