@@ -206,6 +206,9 @@ img {
       border-left: 3px solid $main-color;
       padding: 0.8rem;
     }
+    [class^='award-'] {
+      padding: 1rem;
+    }
     .award-1 {
       grid-area: aw1;
     }
@@ -272,6 +275,61 @@ img {
         border-radius: 50%;
         margin-right: 0.5rem;
       }
+    }
+  }
+}
+
+// CONTACT PAGE
+
+#contact {
+  // SECTION A
+  &-a {
+    .text-fields {
+      display: grid;
+      grid-template-areas:
+        'name email'
+        'subject phone'
+        'message message';
+      grid-gap: 1.2rem;
+      margin-bottom: 1.2rem;
+      // GRID AREAS
+      .name-input {
+        grid-area: name;
+      }
+      .subject-input {
+        grid-area: subject;
+      }
+      .email-input {
+        grid-area: email;
+      }
+      .phone-input {
+        grid-area: phone;
+      }
+      .message-input {
+        grid-area: message;
+        height: 100px;
+      }
+      .text-input {
+        padding: 0.5rem 1rem;
+      }
+    }
+    button[type='submit'] {
+      width: 50%;
+    }
+  }
+  // SECTION B
+  &-b {
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      text-align: center;
+    }
+  }
+  // SECTION C
+  &-c {
+    h1 {
+      text-align: center;
+      font-size: 3rem;
     }
   }
 }
